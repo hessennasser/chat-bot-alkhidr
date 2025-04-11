@@ -397,8 +397,8 @@ const ChatComponent = () => {
 
 			const result = await response.json();
 
-			if (result.data && result.data.conversations) {
-				setConversations(result.data.conversations);
+			if (result.data && result.data.data) {
+				setConversations(result.data.data);
 
 				// Set active conversation if not already set
 				if (!activeConversation && result.data.conversations.length > 0) {
